@@ -1,0 +1,16 @@
+.services_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.services_details__title {
+  color: var(--white-color);
+}
+
+.services_details__text {
+  color: var(--white-color);
+  width: 65%;
+}

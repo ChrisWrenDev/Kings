@@ -1,0 +1,4 @@
+.services__group {
+  display: flex;
+  flex-direction: row;
+}

@@ -3,12 +3,12 @@
   background-color: var(--accent-color);
   font-family: Teko, "sans-serif";
   font-size: 22px;
-  color: #fff;
+  color: var(--white-color);
   border: none;
 }
 
 .btn:hover {
-  background-color: #fff;
+  background-color: var(--white-color);
   color: var(--accent-color);
   cursor: pointer;
 }

@@ -21,7 +21,7 @@
 
 .navigation__list li a:link,
 .navigation__list li a:visited {
-  color: white;
+  color: var(--white-color);
   text-decoration: none;
 }
 

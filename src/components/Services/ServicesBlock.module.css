@@ -1,0 +1,11 @@
+.services__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.services__block--icon {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
