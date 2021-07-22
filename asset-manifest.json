@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/kings-barber-shop/static/css/main.d40ed655.chunk.css",
+    "main.js": "/kings-barber-shop/static/js/main.1524de02.chunk.js",
+    "main.js.map": "/kings-barber-shop/static/js/main.1524de02.chunk.js.map",
+    "runtime-main.js": "/kings-barber-shop/static/js/runtime-main.df4230ca.js",
+    "runtime-main.js.map": "/kings-barber-shop/static/js/runtime-main.df4230ca.js.map",
+    "static/js/2.faf82cb5.chunk.js": "/kings-barber-shop/static/js/2.faf82cb5.chunk.js",
+    "static/js/2.faf82cb5.chunk.js.map": "/kings-barber-shop/static/js/2.faf82cb5.chunk.js.map",
+    "static/js/3.66e3ec0c.chunk.js": "/kings-barber-shop/static/js/3.66e3ec0c.chunk.js",
+    "static/js/3.66e3ec0c.chunk.js.map": "/kings-barber-shop/static/js/3.66e3ec0c.chunk.js.map",
+    "index.html": "/kings-barber-shop/index.html",
+    "static/css/main.d40ed655.chunk.css.map": "/kings-barber-shop/static/css/main.d40ed655.chunk.css.map",
+    "static/js/2.faf82cb5.chunk.js.LICENSE.txt": "/kings-barber-shop/static/js/2.faf82cb5.chunk.js.LICENSE.txt",
+    "static/media/Background_Icon.008c384a.svg": "/kings-barber-shop/static/media/Background_Icon.008c384a.svg",
+    "static/media/Home_Badge--White.4e3d5e7a.svg": "/kings-barber-shop/static/media/Home_Badge--White.4e3d5e7a.svg",
+    "static/media/Kings_Barber_Shop_Logo.aa835400.svg": "/kings-barber-shop/static/media/Kings_Barber_Shop_Logo.aa835400.svg",
+    "static/media/Service_Beard_Icon.8247abd3.svg": "/kings-barber-shop/static/media/Service_Beard_Icon.8247abd3.svg",
+    "static/media/Service_Both_Icon.bd380545.svg": "/kings-barber-shop/static/media/Service_Both_Icon.bd380545.svg",
+    "static/media/Service_Hair_Icon.ec6b146f.svg": "/kings-barber-shop/static/media/Service_Hair_Icon.ec6b146f.svg",
+    "static/media/global-background.7baff060.jpg": "/kings-barber-shop/static/media/global-background.7baff060.jpg",
+    "static/media/home-background.48239bf7.jpg": "/kings-barber-shop/static/media/home-background.48239bf7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df4230ca.js",
+    "static/js/2.faf82cb5.chunk.js",
+    "static/css/main.d40ed655.chunk.css",
+    "static/js/main.1524de02.chunk.js"
+  ]
+}
