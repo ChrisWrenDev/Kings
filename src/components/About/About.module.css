@@ -1,0 +1,32 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 75px 0;
+  background-color: var(--background-light);
+  position: relative;
+}
+
+.about img {
+  width: 266px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  width: 50%;
+}
+
+.about h1,
+.about .seperator,
+.about p {
+  z-index: 1;
+}
+
+.about .headIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
