@@ -1,4 +1,4 @@
-import Logo from "../../assets/Macho_Barber_Shop_Logo.svg";
+import Logo from "../../assets/Kings_Barber_Shop_Logo.svg";
 import Navigation from "./Navigation";
 import AppointmentCounter from "./AppointmentCounter";
 import AppointmentButton from "./AppointmentButton";
