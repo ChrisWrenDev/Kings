@@ -1,0 +1,14 @@
+.btn {
+  width: 190px;
+  background-color: var(--accent-color);
+  font-family: Teko, "sans-serif";
+  font-size: 22px;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: var(--accent-color);
+  cursor: pointer;
+}

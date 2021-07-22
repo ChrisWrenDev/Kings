@@ -1,0 +1,27 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  font-size: 22px;
+  font-family: Teko, sans-serif;
+  text-transform: uppercase;
+}
+
+.navigation li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.navigation li a:link,
+.navigation li a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation li a:hover,
+.navigation li a:active {
+  color: var(--accent-color);
+}
