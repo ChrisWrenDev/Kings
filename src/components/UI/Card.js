@@ -1,7 +1,13 @@
 import classes from "./Card.module.css";
 
 const Card = function (props) {
-  return <div className={classes.card}>{props.children}</div>;
+  const classGroup = `${classes.card} ${props.className}`;
+
+  return (
+    <div key={props.key} className={classGroup}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Card;

@@ -1,0 +1,12 @@
+.slider {
+  width: 75vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.slider__slides {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+}

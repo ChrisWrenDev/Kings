@@ -1,0 +1,20 @@
+.quote {
+}
+
+.quote__text,
+.quote__name {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.quote__text {
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 30px;
+}
+
+.quote__name {
+  font-size: 16px;
+  color: var(--white-color);
+  text-transform: uppercase;
+}

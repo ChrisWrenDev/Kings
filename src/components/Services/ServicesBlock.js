@@ -10,8 +10,8 @@ const ServicesBlock = function (props) {
         src={props.icon}
         alt="service icon"
       />
-      {props.services.map((item) => (
-        <ServiceItem details={item} />
+      {props.services.map((item, index) => (
+        <ServiceItem id={index + 1} details={item} />
       ))}
     </Card>
   );

@@ -12,7 +12,7 @@ const ServiceItem = function (props) {
   return (
     <div
       onClick={itemChangeHandler}
-      key={props.details.id}
+      key={props.id}
       className={classes["services-item"]}
     >
       <div

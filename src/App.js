@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Barbers from "./components/Barbers/Barbers";
 import Products from "./components/Products/Products";
+import Testimonials from "./components/Testimonials/Testimonials";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <Barbers />
       <Products />
+      <Testimonials />
     </Fragment>
   );
 }

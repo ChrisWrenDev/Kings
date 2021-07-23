@@ -8,7 +8,11 @@ const ProductItem = function (props) {
     setProductStatus((prevState) => (prevState ? false : true));
   };
   return (
-    <div className={classes["product-item"]} onClick={productClickHandler}>
+    <div
+      key={props.id}
+      className={classes["product-item"]}
+      onClick={productClickHandler}
+    >
       <img src={props.item.img} alt={props.item.name} />
       <ProductDetails details={props.item} status={productStatus} />
     </div>
