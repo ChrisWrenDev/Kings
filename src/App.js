@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Barbers from "./components/Barbers/Barbers";
+import Products from "./components/Products/Products";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Services />
       <Barbers />
+      <Products />
     </Fragment>
   );
 }

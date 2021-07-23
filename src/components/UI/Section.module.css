@@ -1,0 +1,17 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.section--dark {
+  background-color: var(--background-dark);
+}
+
+.section--light {
+  background-color: var(--background-light);
+}

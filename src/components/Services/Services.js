@@ -1,4 +1,4 @@
-import classes from "./Services.module.css";
+import Section from "../UI/Section";
 import backgroundImg from "../../assets/global-background.jpg";
 import SectionDetails from "../UI/SectionDetails";
 import ServicesGroups from "./ServicesGroups";
@@ -13,8 +13,7 @@ const Services = () => {
   };
 
   return (
-    <section
-      className={classes.services}
+    <Section
       style={{
         backgroundImage: `url(${backgroundImg})`,
         backgroundPosition: "center",
@@ -23,7 +22,7 @@ const Services = () => {
     >
       <SectionDetails details={serviceDetails} />
       <ServicesGroups />
-    </section>
+    </Section>
   );
 };
 

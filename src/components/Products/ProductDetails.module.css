@@ -1,0 +1,25 @@
+.product-details {
+  background-color: var(--background-dark);
+  text-align: center;
+}
+
+.product-details__info {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.product-details__title,
+.product-details__price {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-details__price {
+  color: var(--accent-color);
+}
+
+.product-details__btn {
+  height: 60px;
+}

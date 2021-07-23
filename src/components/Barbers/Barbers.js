@@ -1,4 +1,4 @@
-import classes from "./Barbers.module.css";
+import Section from "../UI/Section";
 import SectionDetails from "../UI/SectionDetails";
 import ProfileGroup from "./ProfileGroup";
 import profileImg1 from "../../assets/barber_1.jpg";
@@ -23,10 +23,10 @@ const Barbers = () => {
   ];
 
   return (
-    <section className={classes.barbers}>
+    <Section type={"dark"}>
       <SectionDetails details={barberDetails} />
       <ProfileGroup details={barberProfiles} />
-    </section>
+    </Section>
   );
 };
 

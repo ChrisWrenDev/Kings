@@ -3,7 +3,7 @@ import classes from "./ProfileBlock.module.css";
 import ProfileDetails from "./ProfileDetails";
 
 const ProfileBlock = function (props) {
-  const [profileStatus, setProfileStatus] = useState(false);
+  const [profileStatus, setProfileStatus] = useState(true);
   const profileClickHandler = function () {
     setProfileStatus((prevStatus) => (prevStatus ? false : true));
   };
