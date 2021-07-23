@@ -1,0 +1,13 @@
+.details__description {
+  width: 50vw;
+  font-size: 18px;
+  text-align: center;
+}
+
+.details__description--light {
+  color: var(--white-color);
+}
+
+.details__description--dark {
+  color: var(--secondary-color);
+}

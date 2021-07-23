@@ -1,9 +1,17 @@
 import classes from "./Services.module.css";
 import backgroundImg from "../../assets/global-background.jpg";
-import ServicesDetails from "./ServicesDetails";
+import SectionDetails from "../UI/SectionDetails";
 import ServicesGroups from "./ServicesGroups";
 
 const Services = () => {
+  const serviceDetails = {
+    step: 1,
+    title: "Choose Your Services",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+    type: "light",
+  };
+
   return (
     <section
       className={classes.services}
@@ -13,7 +21,7 @@ const Services = () => {
         backgroundSize: "cover",
       }}
     >
-      <ServicesDetails />
+      <SectionDetails details={serviceDetails} />
       <ServicesGroups />
     </section>
   );
