@@ -1,0 +1,24 @@
+.footer {
+  height: 200px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__logo {
+  height: 75px;
+}
+
+.footer__address,
+.footer__openHours {
+  color: var(--white-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer__openHours span {
+  color: var(--accent-color);
+  font-weight: 700;
+}

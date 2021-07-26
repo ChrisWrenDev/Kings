@@ -7,6 +7,7 @@ import Barbers from "./components/Barbers/Barbers";
 import Products from "./components/Products/Products";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Gallery from "./components/Gallery/Gallery";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Products />
       <Testimonials />
       <Gallery />
+      <Footer />
     </Fragment>
   );
 }
