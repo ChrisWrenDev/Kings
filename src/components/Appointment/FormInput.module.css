@@ -1,0 +1,33 @@
+.form__input {
+  width: 100%;
+  font-size: 14px;
+  padding: 20px;
+  border-bottom: 1px solid var(--secondary-color);
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: var(--background-dark);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.form__input::-webkit-input-placeholder {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.form__label {
+  display: block;
+  font-size: 12px;
+  transition: all 0.3s;
+  margin-left: 20px;
+  margin-top: 7px;
+  text-transform: uppercase;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}

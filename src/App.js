@@ -8,6 +8,7 @@ import Products from "./components/Products/Products";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/Footer/Footer";
+import Appointment from "./components/Appointment/Appointment";
 import "./App.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Testimonials />
       <Gallery />
       <Footer />
+      <Appointment />
     </Fragment>
   );
 }

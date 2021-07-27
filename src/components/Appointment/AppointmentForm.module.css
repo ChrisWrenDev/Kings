@@ -1,0 +1,25 @@
+.appointment-form__title {
+  font-family: Teko, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.appointment-form__fields {
+  width: 770px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr) 4fr;
+  grid-gap: 30px;
+}
+
+.appointment-form__input,
+.appointment-form__textarea {
+  border: solid 1px var(--secondary-color);
+  background-color: transparent;
+}
+
+.appointment-form__textarea {
+  grid-area: 3 /1 / 4/3;
+}

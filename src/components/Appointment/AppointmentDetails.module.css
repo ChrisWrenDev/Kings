@@ -1,0 +1,15 @@
+.appointment-details {
+  width: 770px;
+}
+
+.appointment-details__title {
+  font-family: Teko, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.appointment-details__group {
+  margin-bottom: 50px;
+}
