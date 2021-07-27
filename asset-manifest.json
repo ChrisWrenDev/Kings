@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Kings-Barber-Shop/static/css/main.3c1534d5.chunk.css",
-    "main.js": "/Kings-Barber-Shop/static/js/main.dc95b78f.chunk.js",
-    "main.js.map": "/Kings-Barber-Shop/static/js/main.dc95b78f.chunk.js.map",
-    "runtime-main.js": "/Kings-Barber-Shop/static/js/runtime-main.a91b8552.js",
-    "runtime-main.js.map": "/Kings-Barber-Shop/static/js/runtime-main.a91b8552.js.map",
-    "static/js/2.599c49a5.chunk.js": "/Kings-Barber-Shop/static/js/2.599c49a5.chunk.js",
-    "static/js/2.599c49a5.chunk.js.map": "/Kings-Barber-Shop/static/js/2.599c49a5.chunk.js.map",
-    "static/js/3.2c19f073.chunk.js": "/Kings-Barber-Shop/static/js/3.2c19f073.chunk.js",
-    "static/js/3.2c19f073.chunk.js.map": "/Kings-Barber-Shop/static/js/3.2c19f073.chunk.js.map",
+    "main.css": "/Kings-Barber-Shop/static/css/main.9a900d6a.chunk.css",
+    "main.js": "/Kings-Barber-Shop/static/js/main.f19e628c.chunk.js",
+    "main.js.map": "/Kings-Barber-Shop/static/js/main.f19e628c.chunk.js.map",
+    "runtime-main.js": "/Kings-Barber-Shop/static/js/runtime-main.19adf32c.js",
+    "runtime-main.js.map": "/Kings-Barber-Shop/static/js/runtime-main.19adf32c.js.map",
+    "static/js/2.4241add8.chunk.js": "/Kings-Barber-Shop/static/js/2.4241add8.chunk.js",
+    "static/js/2.4241add8.chunk.js.map": "/Kings-Barber-Shop/static/js/2.4241add8.chunk.js.map",
+    "static/js/3.24264fc3.chunk.js": "/Kings-Barber-Shop/static/js/3.24264fc3.chunk.js",
+    "static/js/3.24264fc3.chunk.js.map": "/Kings-Barber-Shop/static/js/3.24264fc3.chunk.js.map",
     "index.html": "/Kings-Barber-Shop/index.html",
-    "static/css/main.3c1534d5.chunk.css.map": "/Kings-Barber-Shop/static/css/main.3c1534d5.chunk.css.map",
-    "static/js/2.599c49a5.chunk.js.LICENSE.txt": "/Kings-Barber-Shop/static/js/2.599c49a5.chunk.js.LICENSE.txt",
+    "static/css/main.9a900d6a.chunk.css.map": "/Kings-Barber-Shop/static/css/main.9a900d6a.chunk.css.map",
+    "static/js/2.4241add8.chunk.js.LICENSE.txt": "/Kings-Barber-Shop/static/js/2.4241add8.chunk.js.LICENSE.txt",
     "static/media/Background_Icon.008c384a.svg": "/Kings-Barber-Shop/static/media/Background_Icon.008c384a.svg",
     "static/media/Gallery-01.34b5946d.jpg": "/Kings-Barber-Shop/static/media/Gallery-01.34b5946d.jpg",
     "static/media/Gallery-02.c2788432.jpg": "/Kings-Barber-Shop/static/media/Gallery-02.c2788432.jpg",
@@ -39,9 +39,9 @@
     "static/media/home-background.48239bf7.jpg": "/Kings-Barber-Shop/static/media/home-background.48239bf7.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a91b8552.js",
-    "static/js/2.599c49a5.chunk.js",
-    "static/css/main.3c1534d5.chunk.css",
-    "static/js/main.dc95b78f.chunk.js"
+    "static/js/runtime-main.19adf32c.js",
+    "static/js/2.4241add8.chunk.js",
+    "static/css/main.9a900d6a.chunk.css",
+    "static/js/main.f19e628c.chunk.js"
   ]
 }
