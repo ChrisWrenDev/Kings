@@ -2,6 +2,7 @@ import Section from "../UI/Section";
 import SectionDetails from "../UI/SectionDetails";
 import AppointmentForm from "./AppointmentForm";
 import AppointmentDetails from "./AppointmentDetails";
+import classes from "./Appointment.module.css";
 
 const appointmentDetails = {
   step: 0,
@@ -11,12 +12,20 @@ const appointmentDetails = {
   type: "dark",
 };
 
-const Appointment = function () {
+const Appointment = function (props) {
   return (
-    <Section type={"light"}>
-      <SectionDetails details={appointmentDetails} />
-      <AppointmentDetails />
-      <AppointmentForm />
+    <Section type={"light"} className={classes.appointment}>
+      <div className={classes.appointment__content}>
+        <div
+          onClick={props.onCloseAppointment}
+          className={classes.appointment__close}
+        >
+          &#10006;
+        </div>
+        <SectionDetails details={appointmentDetails} />
+        <AppointmentDetails />
+        <AppointmentForm onCloseAppointment={props.onCloseAppointment} />
+      </div>
     </Section>
   );
 };

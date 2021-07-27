@@ -1,12 +1,14 @@
 import Section from "../UI/Section";
 import SectionDetails from "../UI/SectionDetails";
 import ProfileGroup from "./ProfileGroup";
+import AppointmentButton from "../Header/AppointmentButton";
+import ButtonContainer from "../UI/ButtonContainer";
 import profileImg1 from "../../assets/barber_1.jpg";
 import profileImg2 from "../../assets/barber_2.jpg";
 import profileImg3 from "../../assets/barber_3.jpg";
 import profileImg4 from "../../assets/barber_4.jpg";
 
-const Barbers = () => {
+const Barbers = (props) => {
   const barberDetails = {
     step: 2,
     title: "Our Barbers",
@@ -26,6 +28,12 @@ const Barbers = () => {
     <Section type={"dark"}>
       <SectionDetails details={barberDetails} />
       <ProfileGroup details={barberProfiles} />
+      <ButtonContainer>
+        <AppointmentButton
+          callToAction="Make An Appointment"
+          onShowAppointment={props.onShowAppointment}
+        />
+      </ButtonContainer>
     </Section>
   );
 };

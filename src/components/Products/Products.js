@@ -1,6 +1,8 @@
 import SectionDetails from "../UI/SectionDetails";
 import Section from "../UI/Section";
 import ProductGroup from "./ProductGroup";
+import AppointmentButton from "../Header/AppointmentButton";
+import ButtonContainer from "../UI/ButtonContainer";
 import productImg1 from "../../assets/Product_Black-Hair-Scissor.png";
 import productImg2 from "../../assets/Product_Shaving-Brush.png";
 import productImg3 from "../../assets/Product_Classic-Straight-Razor.png";
@@ -29,11 +31,17 @@ const productItemDetails = [
   { name: "Wooden Hair Brush", price: 25, img: productImg8 },
 ];
 
-const Products = () => {
+const Products = (props) => {
   return (
     <Section type={"light"}>
       <SectionDetails details={productSectionDetails} />
       <ProductGroup items={productItemDetails} />
+      <ButtonContainer>
+        <AppointmentButton
+          callToAction="Submit Product Request"
+          onShowAppointment={props.onShowAppointment}
+        />
+      </ButtonContainer>
     </Section>
   );
 };

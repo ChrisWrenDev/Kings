@@ -35,6 +35,8 @@ const AppointmentForm = function (props) {
           type={"textarea"}
           name="Your message..."
         />
+        <button onClick={props.onCloseAppointment}>Close</button>
+        <button>Submit</button>
       </form>
     </div>
   );

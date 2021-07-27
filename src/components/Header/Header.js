@@ -4,14 +4,17 @@ import AppointmentCounter from "./AppointmentCounter";
 import AppointmentButton from "./AppointmentButton";
 import classes from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={classes.header}>
       <img src={Logo} alt="Macho Logo" className={classes.header__logo} />
       <Navigation />
       <div className={classes.header__booking}>
         <AppointmentCounter />
-        <AppointmentButton />
+        <AppointmentButton
+          callToAction="Book Appointment"
+          onShowAppointment={props.onShowAppointment}
+        />
       </div>
     </header>
   );

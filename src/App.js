@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -12,18 +12,30 @@ import Appointment from "./components/Appointment/Appointment";
 import "./App.css";
 
 function App() {
+  const [appointmentVisable, setAppointmentVisable] = useState(false);
+
+  const showAppointmentHandler = function () {
+    setAppointmentVisable(true);
+  };
+
+  const hideAppointmentHandler = function () {
+    setAppointmentVisable(false);
+  };
+
   return (
     <Fragment>
-      <Header />
+      <Header onShowAppointment={showAppointmentHandler} />
       <Hero />
       <About />
       <Services />
-      <Barbers />
-      <Products />
+      <Barbers onShowAppointment={showAppointmentHandler} />
+      <Products onShowAppointment={showAppointmentHandler} />
       <Testimonials />
       <Gallery />
       <Footer />
-      <Appointment />
+      {appointmentVisable && (
+        <Appointment onCloseAppointment={hideAppointmentHandler} />
+      )}
     </Fragment>
   );
 }
