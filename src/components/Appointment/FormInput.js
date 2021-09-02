@@ -12,7 +12,7 @@ const FormInput = function (props) {
         className={inputClassList}
         required
       />
-      <label className={classes.form__label} for={props.name}>
+      <label className={classes.form__label} htmlFor={props.name}>
         {props.name}
       </label>
     </div>

@@ -5,7 +5,7 @@ const ProductGroup = function (props) {
   return (
     <div className={classes.productGroup}>
       {props.items.map((item, index) => (
-        <ProductItem id={index + 1} item={item} />
+        <ProductItem key={item.id} item={item} />
       ))}
     </div>
   );

@@ -4,8 +4,8 @@ import ProfileBlock from "./ProfileBlock";
 const ProfileGroup = function (props) {
   return (
     <div className={classes.profileGroup}>
-      {props.details.map((barber, index) => (
-        <ProfileBlock key={`${index + 1}`} details={barber} />
+      {props.details.map((barber) => (
+        <ProfileBlock key={barber.id} details={barber} />
       ))}
     </div>
   );

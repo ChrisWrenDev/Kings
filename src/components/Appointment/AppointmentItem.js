@@ -6,10 +6,16 @@ const AppointmentItem = function (props) {
     return (
       <div className={classes["appointment-item"]}>
         <div className={classes["appointment-item__details"]}>
-          <h4 className={classes["appointment-item__title"]}>Name</h4>
-          <p className={classes["appointment-item__price"]}>£25</p>
+          <h4 className={classes["appointment-item__title"]}>
+            {props.item.name}
+          </h4>
+          <p className={classes["appointment-item__price"]}>
+            {props.groupName === "Barbers"
+              ? props.item.position
+              : `£${props.item.price}`}
+          </p>
         </div>
-        <div>
+        <div onClick={props.onRemove}>
           <Button className={classes["appointment-item__btn"]} />
         </div>
       </div>
@@ -22,7 +28,9 @@ const AppointmentItem = function (props) {
             No {props.groupName} have been added
           </h4>
           <p className={classes["appointment-item__price"]}>
-            <a href={`#${props.groupName}`}>VIEW SERVICES</a>
+            <a
+              href={`#${props.groupName}`}
+            >{`VIEW ${props.groupName.toUpperCase()}`}</a>
           </p>
         </div>
       </div>

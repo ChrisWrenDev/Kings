@@ -21,14 +21,14 @@ const productSectionDetails = {
 };
 
 const productItemDetails = [
-  { name: "Black Hair Scissors", price: 20, img: productImg1 },
-  { name: "Classic Shaving Brush", price: 25, img: productImg2 },
-  { name: "Classic Stright Razor", price: 35, img: productImg3 },
-  { name: "Double Edge Razor", price: 20, img: productImg4 },
-  { name: "Foldable Hair Comb", price: 12, img: productImg5 },
-  { name: "Hair Cleaner Brush", price: 20, img: productImg6 },
-  { name: "Shave Cream Cup", price: 25, img: productImg7 },
-  { name: "Wooden Hair Brush", price: 25, img: productImg8 },
+  { id: "p1", name: "Black Hair Scissors", price: 20, img: productImg1 },
+  { id: "p2", name: "Classic Shaving Brush", price: 25, img: productImg2 },
+  { id: "p3", name: "Classic Stright Razor", price: 35, img: productImg3 },
+  { id: "p4", name: "Double Edge Razor", price: 20, img: productImg4 },
+  { id: "p5", name: "Foldable Hair Comb", price: 12, img: productImg5 },
+  { id: "p6", name: "Hair Cleaner Brush", price: 20, img: productImg6 },
+  { id: "p7", name: "Shave Cream Cup", price: 25, img: productImg7 },
+  { id: "p8", name: "Wooden Hair Brush", price: 25, img: productImg8 },
 ];
 
 const Products = (props) => {

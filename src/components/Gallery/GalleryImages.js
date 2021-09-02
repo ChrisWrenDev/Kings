@@ -4,7 +4,7 @@ const GalleryImages = function (props) {
   return (
     <div className={classes.gallery__images}>
       {props.imgs.map((image) => (
-        <img src={image.img} alt={image.group} />
+        <img key={image.id} src={image.img} alt={image.group} />
       ))}
     </div>
   );

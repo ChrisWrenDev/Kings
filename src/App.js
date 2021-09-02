@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/Footer/Footer";
 import Appointment from "./components/Appointment/Appointment";
+import AppointmentProvider from "./store/appointment-provider";
 import "./App.css";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
   };
 
   return (
-    <Fragment>
+    <AppointmentProvider>
       <Header onShowAppointment={showAppointmentHandler} />
       <Hero />
       <About />
@@ -36,7 +37,7 @@ function App() {
       {appointmentVisable && (
         <Appointment onCloseAppointment={hideAppointmentHandler} />
       )}
-    </Fragment>
+    </AppointmentProvider>
   );
 }
 

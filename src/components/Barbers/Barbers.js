@@ -18,10 +18,30 @@ const Barbers = (props) => {
   };
 
   const barberProfiles = [
-    { name: "Charles Smith", position: "- Barber -", img: profileImg1 },
-    { name: "Freddie Morris", position: "- Stylist -", img: profileImg2 },
-    { name: "Ryan Houghton", position: "- Barber -", img: profileImg3 },
-    { name: "Andrew Harper", position: "- Stylist -", img: profileImg4 },
+    {
+      id: "b1",
+      name: "Charles Smith",
+      position: "- Barber -",
+      img: profileImg1,
+    },
+    {
+      id: "b2",
+      name: "Freddie Morris",
+      position: "- Stylist -",
+      img: profileImg2,
+    },
+    {
+      id: "b3",
+      name: "Ryan Houghton",
+      position: "- Barber -",
+      img: profileImg3,
+    },
+    {
+      id: "b4",
+      name: "Andrew Harper",
+      position: "- Stylist -",
+      img: profileImg4,
+    },
   ];
 
   return (

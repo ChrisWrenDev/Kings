@@ -1,18 +1,32 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import classes from "./ServiceItem.module.css";
 import Button from "../UI/Button";
+import AppointmentContext from "../../store/appointment-context";
 
 const ServiceItem = function (props) {
   const [itemStatus, setItemStatus] = useState(true);
+  const appointmentCtx = useContext(AppointmentContext);
 
   const itemChangeHandler = function () {
     setItemStatus((prevStatus) => (!prevStatus ? true : false));
+
+    if (itemStatus) {
+      appointmentCtx.addItem({
+        id: props.details.id,
+        name: props.details.name,
+        type: "services",
+        price: props.details.price,
+        description: props.details.description,
+      });
+    } else {
+      appointmentCtx.removeItem({ id: props.details.id, type: "services" });
+    }
   };
 
   return (
     <div
       onClick={itemChangeHandler}
-      key={props.id}
+      key={props.details.id}
       className={classes["services-item"]}
     >
       <div
