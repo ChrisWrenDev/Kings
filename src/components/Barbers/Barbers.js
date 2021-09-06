@@ -1,3 +1,4 @@
+import { useState, useEffect, useContext } from "react";
 import Section from "../UI/Section";
 import SectionDetails from "../UI/SectionDetails";
 import ProfileGroup from "./ProfileGroup";
@@ -7,8 +8,53 @@ import profileImg1 from "../../assets/barber_1.jpg";
 import profileImg2 from "../../assets/barber_2.jpg";
 import profileImg3 from "../../assets/barber_3.jpg";
 import profileImg4 from "../../assets/barber_4.jpg";
+import useHttp from "../../hooks/use-http";
+import AppointmentContext from "../../store/appointment-context";
 
 const Barbers = (props) => {
+  const [loadBarbers, setLoadBarbers] = useState(false);
+  const appointmentCtx = useContext(AppointmentContext);
+
+  const { loadingStatus, error, httpRequest } = useHttp();
+
+  useEffect(() => {
+    const transformData = (barbers) => {
+      if (loadBarbers) return;
+
+      const profileImages = [
+        profileImg1,
+        profileImg2,
+        profileImg3,
+        profileImg4,
+      ];
+
+      const barberProfiles = [];
+
+      let index = 0;
+      for (const id in barbers) {
+        barberProfiles.push({
+          id: id,
+          name: barbers[id].name,
+          position: barbers[id].position,
+          img: profileImages[index],
+          status: false,
+        });
+        index++;
+      }
+
+      appointmentCtx.addItems(barberProfiles, "barbers");
+    };
+
+    httpRequest(
+      {
+        url: "https://kings-barbers-85e2a-default-rtdb.europe-west1.firebasedatabase.app/barbers.json",
+      },
+      transformData
+    );
+
+    setLoadBarbers(true);
+  }, [httpRequest, appointmentCtx, loadBarbers]);
+
   const barberDetails = {
     step: 2,
     title: "Our Barbers",
@@ -17,37 +63,14 @@ const Barbers = (props) => {
     type: "dark",
   };
 
-  const barberProfiles = [
-    {
-      id: "b1",
-      name: "Charles Smith",
-      position: "- Barber -",
-      img: profileImg1,
-    },
-    {
-      id: "b2",
-      name: "Freddie Morris",
-      position: "- Stylist -",
-      img: profileImg2,
-    },
-    {
-      id: "b3",
-      name: "Ryan Houghton",
-      position: "- Barber -",
-      img: profileImg3,
-    },
-    {
-      id: "b4",
-      name: "Andrew Harper",
-      position: "- Stylist -",
-      img: profileImg4,
-    },
-  ];
-
   return (
     <Section type={"dark"}>
       <SectionDetails details={barberDetails} />
-      <ProfileGroup details={barberProfiles} />
+      {!loadingStatus && !error && (
+        <ProfileGroup details={appointmentCtx.barbers} />
+      )}
+      {loadingStatus && <p>Loading...</p>}
+      {error && <p>{error}</p>}
       <ButtonContainer>
         <AppointmentButton
           callToAction="Make An Appointment"

@@ -9,28 +9,37 @@ const defaultAppointmentState = {
 
 const apppointmentReducer = (state, action) => {
   if (action.type === "ADD") {
-    const type = action.item.type;
-
-    const updatedItems = state[type].concat(action.item);
+    const type = action.group;
 
     return {
       ...state,
-      [`${type}`]: updatedItems,
+      [`${type}`]: action.items,
     };
   }
 
-  if (action.type === "REMOVE") {
-    const type = action.item.type;
-    console.log(type);
-    const updatedItems = state[type].filter(
-      (item) => item.id !== action.item.id
-    );
+  if (action.type === "UPDATE") {
+    const updatedItems = [...state[action.group]];
+    const itemIndex = updatedItems.indexOf(action.item);
+    updatedItems[itemIndex].status = !updatedItems[itemIndex].status;
 
     return {
       ...state,
-      [`${type}`]: updatedItems,
+      [`${action.item.group}`]: updatedItems,
     };
   }
+
+  // if (action.type === "REMOVE") {
+  //   const type = action.item.type;
+  //   console.log(type);
+  //   const updatedItems = state[type].filter(
+  //     (item) => item.id !== action.item.id
+  //   );
+
+  //   return {
+  //     ...state,
+  //     [`${type}`]: updatedItems,
+  //   };
+  // }
 
   if (action.type === "CLEAR") {
     return defaultAppointmentState;
@@ -45,23 +54,25 @@ const AppointmentProvider = (props) => {
     defaultAppointmentState
   );
 
-  const addItemHandler = (item) => {
-    appointmentDispatch({ type: "ADD", item: item });
+  const addItemsHandler = (items, group) => {
+    appointmentDispatch({ type: "ADD", items, group });
   };
-  const removeItemHandler = (item) => {
-    appointmentDispatch({ type: "REMOVE", item: item });
-  };
+
   const clearItemsHandler = () => {
     appointmentDispatch({ type: "CLEAR" });
+  };
+
+  const updateItemStatusHandler = (item, group) => {
+    appointmentDispatch({ type: "UPDATE", item, group });
   };
 
   const appointmentCtx = {
     services: appointmentState.services,
     barbers: appointmentState.barbers,
     products: appointmentState.products,
-    addItem: addItemHandler,
-    removeItem: removeItemHandler,
+    addItems: addItemsHandler,
     clearItems: clearItemsHandler,
+    updateItemStatus: updateItemStatusHandler,
   };
 
   return (

@@ -4,9 +4,9 @@ const AppointmentContext = React.createContext({
   services: [],
   barbers: [],
   products: [],
-  addItem: () => {},
-  removeItem: () => {},
+  addItems: () => {},
   clearItems: () => {},
+  updateItemStatus: () => {},
 });
 
 export default AppointmentContext;

@@ -16,7 +16,10 @@ const AppointmentItem = function (props) {
           </p>
         </div>
         <div onClick={props.onRemove}>
-          <Button className={classes["appointment-item__btn"]} />
+          <Button
+            status={props.status}
+            className={classes["appointment-item__btn"]}
+          />
         </div>
       </div>
     );

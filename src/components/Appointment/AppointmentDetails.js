@@ -6,18 +6,12 @@ import AppointmentContext from "../../store/appointment-context";
 const AppointmentDetails = function () {
   const appointmentCtx = useContext(AppointmentContext);
 
-  const services = appointmentCtx.services;
-  const barbers = appointmentCtx.barbers;
-  const products = appointmentCtx.products;
+  const services = appointmentCtx.services.filter((item) => item.status);
+  const barbers = appointmentCtx.barbers.filter((item) => item.status);
+  const products = appointmentCtx.products.filter((item) => item.status);
 
-  const removeServiceHandler = function (item) {
-    appointmentCtx.removeItem({ ...item, type: "services" });
-  };
-  const removeBarberHandler = function (item) {
-    appointmentCtx.removeItem({ ...item, type: "barbers" });
-  };
-  const removeProductHandler = function (item) {
-    appointmentCtx.removeItem({ ...item, type: "products" });
+  const removeItemHandler = function (item, group) {
+    appointmentCtx.updateItemStatus(item, group);
   };
 
   return (
@@ -35,7 +29,7 @@ const AppointmentDetails = function () {
                 status={true}
                 item={item}
                 groupName="Services"
-                onRemove={removeServiceHandler.bind(null, item)}
+                onRemove={removeItemHandler.bind(null, item, "services")}
               />
             );
           })}
@@ -50,10 +44,10 @@ const AppointmentDetails = function () {
             return (
               <AppointmentItem
                 key={item.id}
-                status={true}
+                status={item.status}
                 item={item}
                 groupName="Barbers"
-                onRemove={removeBarberHandler.bind(null, item)}
+                onRemove={removeItemHandler.bind(null, item, "barbers")}
               />
             );
           })}
@@ -68,10 +62,10 @@ const AppointmentDetails = function () {
             return (
               <AppointmentItem
                 key={item.id}
-                status={true}
+                status={item.status}
                 item={item}
                 groupName="Products"
-                onRemove={removeProductHandler.bind(null, item)}
+                onRemove={removeItemHandler.bind(null, item, "products")}
               />
             );
           })}

@@ -13,7 +13,7 @@ const ProductDetails = function (props) {
         </p>
       </div>
       <div className={classes["product-details__btn"]}>
-        <Button status={props.status} />
+        <Button status={props.status} type={"light"} />
       </div>
     </div>
   );

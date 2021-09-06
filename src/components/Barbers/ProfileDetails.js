@@ -6,7 +6,7 @@ const ProfileDetails = function (props) {
     <div className={classes["profile-details"]}>
       <div
         className={`${classes["profile-details__info"]} ${
-          props.status
+          !props.details.status
             ? classes["profile-details__info--add"]
             : classes["profile-details__info--remove"]
         }`}
@@ -16,16 +16,16 @@ const ProfileDetails = function (props) {
         </h4>
         <p
           className={`${classes["profile-details__position"]} ${
-            props.status
+            !props.details.status
               ? classes["profile-details__position--add"]
               : classes["profile-details__position--remove"]
           }`}
         >
-          {props.details.position}
+          {`- ${props.details.position} -`}
         </p>
       </div>
       <div className={classes["profile-details__btn"]}>
-        <Button status={props.status} />
+        <Button status={props.details.status} type={"light"} />
       </div>
     </div>
   );

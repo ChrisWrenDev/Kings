@@ -2,7 +2,7 @@ import classes from "./Arrow.module.css";
 
 const Arrow = function (props) {
   return (
-    <div onClick={props.onClick} className={classes.arrow}>
+    <div onClick={props.changeCounter} className={classes.arrow}>
       {props.children}
     </div>
   );

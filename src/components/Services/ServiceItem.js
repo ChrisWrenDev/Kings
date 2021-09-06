@@ -1,26 +1,13 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import classes from "./ServiceItem.module.css";
 import Button from "../UI/Button";
 import AppointmentContext from "../../store/appointment-context";
 
 const ServiceItem = function (props) {
-  const [itemStatus, setItemStatus] = useState(true);
   const appointmentCtx = useContext(AppointmentContext);
 
   const itemChangeHandler = function () {
-    setItemStatus((prevStatus) => (!prevStatus ? true : false));
-
-    if (itemStatus) {
-      appointmentCtx.addItem({
-        id: props.details.id,
-        name: props.details.name,
-        type: "services",
-        price: props.details.price,
-        description: props.details.description,
-      });
-    } else {
-      appointmentCtx.removeItem({ id: props.details.id, type: "services" });
-    }
+    appointmentCtx.updateItemStatus(props.details, "services");
   };
 
   return (
@@ -31,7 +18,7 @@ const ServiceItem = function (props) {
     >
       <div
         className={`${classes["services-item__details"]} ${
-          itemStatus
+          !props.details.status
             ? classes["services-item__details--add"]
             : classes["services-item__details--remove"]
         }`}
@@ -41,14 +28,14 @@ const ServiceItem = function (props) {
         </h4>
         <p
           className={`${classes["services-item__price"]} ${
-            itemStatus
+            !props.details.status
               ? classes["services-item__price--add"]
               : classes["services-item__price--remove"]
           }`}
         >{`£${props.details.price}`}</p>
         <p
           className={`${classes["services-item__description"]} ${
-            itemStatus
+            !props.details.status
               ? classes["services-item__description--add"]
               : classes["services-item__description--remove"]
           }`}
@@ -56,7 +43,7 @@ const ServiceItem = function (props) {
           {props.details.description}
         </p>
       </div>
-      <Button status={itemStatus} />
+      <Button status={props.details.status} />
     </div>
   );
 };

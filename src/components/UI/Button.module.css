@@ -27,3 +27,13 @@
   background-color: var(--secondary-color);
   color: var(--white-color);
 }
+
+.btn-light--remove {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.btn-light--remove:hover {
+  background-color: var(--white-color);
+  color: var(--secondary-color);
+}
