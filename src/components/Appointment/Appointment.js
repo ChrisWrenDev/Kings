@@ -14,7 +14,11 @@ const appointmentDetails = {
 
 const Appointment = function (props) {
   return (
-    <Section type={"light"} className={classes.appointment}>
+    <Section
+      type={"light"}
+      className={classes.appointment}
+      //onClick={props.onCloseAppointment}
+    >
       <div className={classes.appointment__content}>
         <div
           onClick={props.onCloseAppointment}

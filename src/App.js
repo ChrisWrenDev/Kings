@@ -9,7 +9,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/Footer/Footer";
 import Appointment from "./components/Appointment/Appointment";
-import AppointmentProvider from "./store/appointment-provider";
+import ItemsProvider from "./store/items-context";
 import "./App.css";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <AppointmentProvider>
+    <ItemsProvider>
       <Header onShowAppointment={showAppointmentHandler} />
       <Hero />
       <About />
@@ -37,7 +37,7 @@ function App() {
       {appointmentVisable && (
         <Appointment onCloseAppointment={hideAppointmentHandler} />
       )}
-    </AppointmentProvider>
+    </ItemsProvider>
   );
 }
 

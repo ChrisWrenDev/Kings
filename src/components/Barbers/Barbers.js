@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import Section from "../UI/Section";
 import SectionDetails from "../UI/SectionDetails";
 import ProfileGroup from "./ProfileGroup";
@@ -9,11 +9,12 @@ import profileImg2 from "../../assets/barber_2.jpg";
 import profileImg3 from "../../assets/barber_3.jpg";
 import profileImg4 from "../../assets/barber_4.jpg";
 import useHttp from "../../hooks/use-http";
-import AppointmentContext from "../../store/appointment-context";
+import { ItemsContext } from "../../store/items-context";
 
 const Barbers = (props) => {
   const [loadBarbers, setLoadBarbers] = useState(false);
-  const appointmentCtx = useContext(AppointmentContext);
+
+  const { itemsState, itemsDispatch } = ItemsContext();
 
   const { loadingStatus, error, httpRequest } = useHttp();
 
@@ -42,7 +43,11 @@ const Barbers = (props) => {
         index++;
       }
 
-      appointmentCtx.addItems(barberProfiles, "barbers");
+      itemsDispatch({
+        type: "ADD_ITEMS",
+        items: barberProfiles,
+        group: "barbers",
+      });
     };
 
     httpRequest(
@@ -53,7 +58,7 @@ const Barbers = (props) => {
     );
 
     setLoadBarbers(true);
-  }, [httpRequest, appointmentCtx, loadBarbers]);
+  }, [httpRequest, loadBarbers, itemsDispatch]);
 
   const barberDetails = {
     step: 2,
@@ -67,7 +72,7 @@ const Barbers = (props) => {
     <Section type={"dark"}>
       <SectionDetails details={barberDetails} />
       {!loadingStatus && !error && (
-        <ProfileGroup details={appointmentCtx.barbers} />
+        <ProfileGroup details={itemsState.barbers} />
       )}
       {loadingStatus && <p>Loading...</p>}
       {error && <p>{error}</p>}

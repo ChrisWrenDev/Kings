@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import SectionDetails from "../UI/SectionDetails";
 import Section from "../UI/Section";
 import ProductGroup from "./ProductGroup";
@@ -13,7 +13,7 @@ import productImg6 from "../../assets/Product_Hair-Cleaner-Brush.png";
 import productImg7 from "../../assets/Product_Shave-Cream-Cup.png";
 import productImg8 from "../../assets/Product_Wooden-Hair-Brus.png";
 import useHttp from "../../hooks/use-http";
-import AppointmentContext from "../../store/appointment-context";
+import { ItemsContext } from "../../store/items-context";
 
 const productSectionDetails = {
   step: 3,
@@ -25,7 +25,8 @@ const productSectionDetails = {
 
 const Products = (props) => {
   const [loadProducts, setLoadProducts] = useState(false);
-  const appointmentCtx = useContext(AppointmentContext);
+
+  const { itemsState, itemsDispatch } = ItemsContext();
 
   const { loadingStatus, error, httpRequest } = useHttp();
 
@@ -58,7 +59,11 @@ const Products = (props) => {
         index++;
       }
 
-      appointmentCtx.addItems(productData, "products");
+      itemsDispatch({
+        type: "ADD_ITEMS",
+        items: productData,
+        group: "products",
+      });
     };
 
     httpRequest(
@@ -69,14 +74,12 @@ const Products = (props) => {
     );
 
     setLoadProducts(true);
-  }, [httpRequest, appointmentCtx, loadProducts]);
+  }, [httpRequest, loadProducts, itemsDispatch]);
 
   return (
-    <Section type={"light"}>
+    <Section id="products" type={"light"}>
       <SectionDetails details={productSectionDetails} />
-      {!loadingStatus && !error && (
-        <ProductGroup items={appointmentCtx.products} />
-      )}
+      {!loadingStatus && !error && <ProductGroup items={itemsState.products} />}
       {loadingStatus && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <ButtonContainer>

@@ -1,17 +1,16 @@
-import { useContext } from "react";
 import AppointmentItem from "./AppointmentItem";
 import classes from "./AppointmentDetails.module.css";
-import AppointmentContext from "../../store/appointment-context";
+import { ItemsContext } from "../../store/items-context";
 
 const AppointmentDetails = function () {
-  const appointmentCtx = useContext(AppointmentContext);
+  const { itemsState, itemsDispatch } = ItemsContext();
 
-  const services = appointmentCtx.services.filter((item) => item.status);
-  const barbers = appointmentCtx.barbers.filter((item) => item.status);
-  const products = appointmentCtx.products.filter((item) => item.status);
+  const services = itemsState.services.filter((item) => item.status);
+  const barbers = itemsState.barbers.filter((item) => item.status);
+  const products = itemsState.products.filter((item) => item.status);
 
   const removeItemHandler = function (item, group) {
-    appointmentCtx.updateItemStatus(item, group);
+    itemsDispatch({ type: "UPDATE_ITEM", item, group });
   };
 
   return (

@@ -8,19 +8,37 @@
 
 .appointment-form__fields {
   width: 770px;
+  height: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr) 4fr 0.5fr;
   grid-gap: 30px;
 }
 
-.appointment-form__input,
-.appointment-form__textarea {
-  border: solid 1px var(--secondary-color);
-  background-color: transparent;
+.appointment-form__submitBtn {
+  border: none;
+  padding: 15px;
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
 
-.appointment-form__textarea {
-  grid-column: 3/4;
-  grid-row: 1 / span 2;
+.appointment-form__submitBtn:disabled {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+.appointment-form__submitBtn:hover {
+  background-color: var(--white-color);
+  color: var(--secondary-color);
+}
+
+.appointment-form__closeBtn {
+  border: none;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.appointment-form__closeBtn:hover {
+  background-color: var(--white-color);
+  color: var(--secondary-color);
 }

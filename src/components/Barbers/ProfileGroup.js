@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./ProfileGroup.module.css";
 import ProfileBlock from "./ProfileBlock";
 
@@ -11,4 +12,4 @@ const ProfileGroup = function (props) {
   );
 };
 
-export default ProfileGroup;
+export default React.memo(ProfileGroup);

@@ -1,13 +1,16 @@
-import { useContext } from "react";
 import classes from "./ProfileBlock.module.css";
 import ProfileDetails from "./ProfileDetails";
-import AppointmentContext from "../../store/appointment-context";
+import { ItemsContext } from "../../store/items-context";
 
 const ProfileBlock = function (props) {
-  const appointmentCtx = useContext(AppointmentContext);
+  const { itemsDispatch } = ItemsContext();
 
   const profileClickHandler = function () {
-    appointmentCtx.updateItemStatus(props.details, "barbers");
+    itemsDispatch({
+      type: "UPDATE_ITEM",
+      item: props.details,
+      group: "barbers",
+    });
   };
 
   return (

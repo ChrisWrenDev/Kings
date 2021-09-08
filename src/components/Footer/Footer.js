@@ -3,7 +3,7 @@ import logo from "../../assets/Kings_Barber_Shop_Logo.svg";
 
 const Footer = () => {
   return (
-    <footer className={classes.footer}>
+    <footer id="footer" className={classes.footer}>
       <p className={classes.footer__address}>
         848 28th st, Brooklyn
         <br />

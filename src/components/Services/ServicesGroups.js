@@ -1,3 +1,4 @@
+import React from "react";
 import ServicesBlock from "./ServicesBlock";
 import classes from "./ServicesGroups.module.css";
 import servicesIcon1 from "../../assets/Service_Hair_Icon.svg";
@@ -36,4 +37,4 @@ const ServicesGroup = function (props) {
   );
 };
 
-export default ServicesGroup;
+export default React.memo(ServicesGroup);

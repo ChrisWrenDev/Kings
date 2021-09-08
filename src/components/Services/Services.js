@@ -1,14 +1,15 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import Section from "../UI/Section";
 import backgroundImg from "../../assets/global-background.jpg";
 import SectionDetails from "../UI/SectionDetails";
 import ServicesGroups from "./ServicesGroups";
 import useHttp from "../../hooks/use-http";
-import AppointmentContext from "../../store/appointment-context";
+import { ItemsContext } from "../../store/items-context";
 
 const Services = () => {
   const [loadServices, setLoadServices] = useState(false);
-  const appointmentCtx = useContext(AppointmentContext);
+
+  const { itemsState, itemsDispatch } = ItemsContext();
 
   const { loadingStatus, error, httpRequest } = useHttp();
 
@@ -29,7 +30,11 @@ const Services = () => {
         });
       }
 
-      appointmentCtx.addItems(servicesData, "services");
+      itemsDispatch({
+        type: "ADD_ITEMS",
+        items: servicesData,
+        group: "services",
+      });
     };
 
     httpRequest(
@@ -40,7 +45,7 @@ const Services = () => {
     );
 
     setLoadServices(true);
-  }, [httpRequest, appointmentCtx, loadServices]);
+  }, [httpRequest, loadServices, itemsDispatch]);
 
   const serviceDetails = {
     step: 1,
@@ -52,6 +57,7 @@ const Services = () => {
 
   return (
     <Section
+      id="services"
       style={{
         backgroundImage: `url(${backgroundImg})`,
         backgroundPosition: "center",
@@ -60,7 +66,7 @@ const Services = () => {
     >
       <SectionDetails details={serviceDetails} />
       {!loadingStatus && !error && (
-        <ServicesGroups services={appointmentCtx.services} />
+        <ServicesGroups services={itemsState.services} />
       )}
       {loadingStatus && <p>Loading...</p>}
       {error && <p>{error}</p>}

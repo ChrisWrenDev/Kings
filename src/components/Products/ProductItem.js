@@ -1,13 +1,12 @@
-import { useContext } from "react";
 import ProductDetails from "./ProductDetails";
 import classes from "./ProductItem.module.css";
-import AppointmentContext from "../../store/appointment-context";
+import { ItemsContext } from "../../store/items-context";
 
 const ProductItem = function (props) {
-  const appointmentCtx = useContext(AppointmentContext);
+  const { itemsDispatch } = ItemsContext();
 
   const productClickHandler = function () {
-    appointmentCtx.updateItemStatus(props.item, "products");
+    itemsDispatch({ type: "UPDATE_ITEM", item: props.item, group: "products" });
   };
   return (
     <div

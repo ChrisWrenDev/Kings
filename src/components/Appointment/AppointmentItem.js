@@ -18,6 +18,7 @@ const AppointmentItem = function (props) {
         <div onClick={props.onRemove}>
           <Button
             status={props.status}
+            type="light"
             className={classes["appointment-item__btn"]}
           />
         </div>

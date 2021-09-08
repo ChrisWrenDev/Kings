@@ -13,7 +13,7 @@ const aboutDetails = {
 
 const About = () => {
   return (
-    <Section type={"light"}>
+    <Section type={"light"} id="about">
       <img className={classes.headIcon} src={headIcon} alt="headIcon" />
       <SectionDetails details={aboutDetails} />
     </Section>

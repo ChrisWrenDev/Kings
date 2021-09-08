@@ -7,7 +7,12 @@ const Section = function (props) {
       : classes["section--dark"]
   } ${props.className}`;
   return (
-    <section style={props.style} className={classList}>
+    <section
+      id={props.id}
+      style={props.style}
+      className={classList}
+      onClick={props.onClick}
+    >
       {props.children}
     </section>
   );

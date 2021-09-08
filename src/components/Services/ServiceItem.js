@@ -1,13 +1,16 @@
-import { useContext } from "react";
 import classes from "./ServiceItem.module.css";
 import Button from "../UI/Button";
-import AppointmentContext from "../../store/appointment-context";
+import { ItemsContext } from "../../store/items-context";
 
 const ServiceItem = function (props) {
-  const appointmentCtx = useContext(AppointmentContext);
+  const { itemsDispatch } = ItemsContext();
 
   const itemChangeHandler = function () {
-    appointmentCtx.updateItemStatus(props.details, "services");
+    itemsDispatch({
+      type: "UPDATE_ITEM",
+      item: props.details,
+      group: "services",
+    });
   };
 
   return (

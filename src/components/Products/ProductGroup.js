@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./ProductGroup.module.css";
 import ProductItem from "./ProductItem";
 
@@ -11,4 +12,4 @@ const ProductGroup = function (props) {
   );
 };
 
-export default ProductGroup;
+export default React.memo(ProductGroup);

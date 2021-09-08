@@ -71,7 +71,7 @@ const Gallery = () => {
   };
 
   return (
-    <Section type={"dark"}>
+    <Section id="gallery" type={"dark"}>
       <SectionDetails details={galleryDetails} />
       <GalleryFilter items={filterItems} onClick={galleryFilterHandler} />
       <GalleryImages imgs={galleryState} />
