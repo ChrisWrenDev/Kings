@@ -7,10 +7,21 @@
   cursor: pointer;
 }
 
-.gallery__filter p {
+.gallery__filter-text {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.gallery__filter-text:hover {
+  opacity: 0.7;
+}
+
+.gallery__filter-text--inactive {
   color: var(--secondary-color);
+}
+
+.gallery__filter-text--active {
+  color: var(--accent-color);
 }

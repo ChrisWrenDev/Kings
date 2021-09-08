@@ -42,29 +42,42 @@ const filterItems = [
 ];
 
 const galleryReducer = function (state, action) {
-  if (action.type === "All") {
-    return galleryImages;
+  switch (action.type) {
+    case "All":
+      return {
+        group: "All",
+        images: galleryImages,
+      };
+    case "Barber":
+      return {
+        group: "Barber",
+        images: galleryImages.filter((img) => img.group === "Barber"),
+      };
+    case "Beards":
+      return {
+        group: "Beards",
+        images: galleryImages.filter((img) => img.group === "Beards"),
+      };
+    case "Haircut":
+      return {
+        group: "Haircut",
+        images: galleryImages.filter((img) => img.group === "Haircut"),
+      };
+    case "Interior":
+      return {
+        group: "Interior",
+        images: galleryImages.filter((img) => img.group === "Interior"),
+      };
+    default:
+      return state;
   }
-  if (action.type === "Barber") {
-    return galleryImages.filter((img) => img.group === "Barber");
-  }
-  if (action.type === "Beards") {
-    return galleryImages.filter((img) => img.group === "Beards");
-  }
-  if (action.type === "Haircut") {
-    return galleryImages.filter((img) => img.group === "Haircut");
-  }
-  if (action.type === "Interior") {
-    return galleryImages.filter((img) => img.group === "Interior");
-  }
-  return galleryImages;
 };
 
 const Gallery = () => {
-  const [galleryState, galleryDispatch] = useReducer(
-    galleryReducer,
-    galleryImages
-  );
+  const [galleryState, galleryDispatch] = useReducer(galleryReducer, {
+    group: "All",
+    images: galleryImages,
+  });
 
   const galleryFilterHandler = function (group) {
     galleryDispatch({ type: group.name });
@@ -73,8 +86,12 @@ const Gallery = () => {
   return (
     <Section id="gallery" type={"dark"}>
       <SectionDetails details={galleryDetails} />
-      <GalleryFilter items={filterItems} onClick={galleryFilterHandler} />
-      <GalleryImages imgs={galleryState} />
+      <GalleryFilter
+        active={galleryState.group}
+        items={filterItems}
+        onClick={galleryFilterHandler}
+      />
+      <GalleryImages imgs={galleryState.images} />
     </Section>
   );
 };
