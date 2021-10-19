@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Kings-Barber-Shop/static/css/main.a959e82a.chunk.css",
-    "main.js": "/Kings-Barber-Shop/static/js/main.edab60b6.chunk.js",
-    "main.js.map": "/Kings-Barber-Shop/static/js/main.edab60b6.chunk.js.map",
+    "main.js": "/Kings-Barber-Shop/static/js/main.efa0978d.chunk.js",
+    "main.js.map": "/Kings-Barber-Shop/static/js/main.efa0978d.chunk.js.map",
     "runtime-main.js": "/Kings-Barber-Shop/static/js/runtime-main.c9a58a29.js",
     "runtime-main.js.map": "/Kings-Barber-Shop/static/js/runtime-main.c9a58a29.js.map",
-    "static/js/2.47ee53be.chunk.js": "/Kings-Barber-Shop/static/js/2.47ee53be.chunk.js",
-    "static/js/2.47ee53be.chunk.js.map": "/Kings-Barber-Shop/static/js/2.47ee53be.chunk.js.map",
+    "static/js/2.c83284f7.chunk.js": "/Kings-Barber-Shop/static/js/2.c83284f7.chunk.js",
+    "static/js/2.c83284f7.chunk.js.map": "/Kings-Barber-Shop/static/js/2.c83284f7.chunk.js.map",
     "static/js/3.56684aab.chunk.js": "/Kings-Barber-Shop/static/js/3.56684aab.chunk.js",
     "static/js/3.56684aab.chunk.js.map": "/Kings-Barber-Shop/static/js/3.56684aab.chunk.js.map",
     "index.html": "/Kings-Barber-Shop/index.html",
     "static/css/main.a959e82a.chunk.css.map": "/Kings-Barber-Shop/static/css/main.a959e82a.chunk.css.map",
-    "static/js/2.47ee53be.chunk.js.LICENSE.txt": "/Kings-Barber-Shop/static/js/2.47ee53be.chunk.js.LICENSE.txt",
+    "static/js/2.c83284f7.chunk.js.LICENSE.txt": "/Kings-Barber-Shop/static/js/2.c83284f7.chunk.js.LICENSE.txt",
     "static/media/Background_Icon.008c384a.svg": "/Kings-Barber-Shop/static/media/Background_Icon.008c384a.svg",
     "static/media/Gallery-01.34b5946d.jpg": "/Kings-Barber-Shop/static/media/Gallery-01.34b5946d.jpg",
     "static/media/Gallery-02.c2788432.jpg": "/Kings-Barber-Shop/static/media/Gallery-02.c2788432.jpg",
@@ -40,8 +40,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c9a58a29.js",
-    "static/js/2.47ee53be.chunk.js",
+    "static/js/2.c83284f7.chunk.js",
     "static/css/main.a959e82a.chunk.css",
-    "static/js/main.edab60b6.chunk.js"
+    "static/js/main.efa0978d.chunk.js"
   ]
 }
